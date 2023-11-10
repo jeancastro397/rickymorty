@@ -1,0 +1,22 @@
+<ion-card *ngIf="personaje">
+  <img [src]="personaje.image" alt="imagen" />
+  <ion-card-header>
+    <ion-card-title>{{ personaje.name }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+
+    <!-- Personajes Vivos -->
+    <ion-list *ngIf="personaje.status == 'Alive'">
+      <ion-item> Estado: Vivo </ion-item>
+      <ion-item>
+        <button type="button" (click)="matarPersonaje()">Matar</button>
+      </ion-item>
+    </ion-list>
+
+    <!-- Personajes muertos -->
+    <ion-list *ngIf="personaje.status == 'Dead'">
+      <ion-item> Estado: Muerto </ion-item>
+      <ion-item><button type="button" (click)="revivirPersonaje()">Revivir</button></ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

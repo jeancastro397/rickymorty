@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Personaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Personajes vivos</h1>
+  <app-personaje-vivo [vivos]="personajeVivo" (idPersonajeAsesinado)="asesinarPersonaje($event)"></app-personaje-vivo>
+  <h1>Personajes Muertos</h1>
+  <app-personaje-muerto [muertos]="personajeMuerto"></app-personaje-muerto>
+</ion-content>

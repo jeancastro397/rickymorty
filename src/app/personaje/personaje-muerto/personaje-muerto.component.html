@@ -1,0 +1,5 @@
+<app-mostrar-personaje
+  *ngFor="let per of muertos"
+  [personaje]="per"
+  (personajeRevivido)="escucharPerRevivido($event)"
+></app-mostrar-personaje>
